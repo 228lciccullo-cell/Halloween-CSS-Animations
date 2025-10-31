@@ -42,7 +42,7 @@ body{
   margin: 10% auto;
   width: 80%;
   height: 80%;
-  animation: flaoty 2s infinite;
+  animation: floaty 2s infinite;
 }
 
 #spooky #body{
@@ -64,7 +64,7 @@ body{
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-image: #f2fbf1;
+  background: #f2fbf1;
   animation: floaty .2s infinite;
 }
 
@@ -76,7 +76,7 @@ body{
   right: -18px;
 }
 
-#spookey #body #eyes {
+#spooky #body #eyes {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -86,7 +86,7 @@ body{
 }
 
 #spooky #body #eyes:before,
-#spo0ky #body #eyes:after{
+#spooky #body #eyes:after{
   content: ' ';
   display: block;
   width: 30px;
@@ -132,10 +132,30 @@ body{
 }
 
 #shadow {
-  margin: -90 auto 0;
+  margin: -90px auto 0;
   background: #252c49;
   width: 180px;
   height: 40px;
   border-radius: 50%;
   animation: zoomy 2s infinite;
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes zoomy {
+  0%, 100%{
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
 }
